@@ -30,6 +30,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataService\ISQLite.cs" />
+    <Compile Include="DataService\ISQLiteOperation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLitePCLRaw.core">
@@ -47,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectMVVM.Entity\ProjectMVVM.Entity.csproj">
+      <Project>{EA1C54D1-52B8-424B-B278-EA0762361D9A}</Project>
+      <Name>ProjectMVVM.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
