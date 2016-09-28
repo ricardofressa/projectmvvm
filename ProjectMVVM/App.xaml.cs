@@ -8,7 +8,7 @@ namespace ProjectMVVM
 		{
 			InitializeComponent();
 
-			MainPage = new ProjectMVVMPage();
+			MainPage = new HomeViewPage();
 		}
 
 		protected override void OnStart()

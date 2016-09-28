@@ -3,32 +3,12 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace ProjectMVVM
+namespace ProjectMVVM.Entity
 {
-	public class ViewModelBase : ViewModelBase<object>
+	public class EntityBase : INotifyPropertyChanged
 	{
-	}
-
-	public class ViewModelBase<T> : INotifyPropertyChanged
-		where T : class, new()
-	{
-		private T _entity;
-
-		T Entity { 
-			get
-			{
-				return _entity;
-			}
-			set
-			{
-				_entity = value;
-				RaisedPropertyChanged(() => Entity);
-			}
-		}
-
-		public ViewModelBase()
+		public EntityBase()
 		{
-			Entity = new T();
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -52,7 +32,6 @@ namespace ProjectMVVM
 				}
 			}
 		}
-
 
 	}
 }
